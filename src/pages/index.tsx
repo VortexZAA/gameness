@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 const menu = [
   { name: "Home", link: "/", target: "_self" },
   { name: "Twitter", link: "#", target: "_blank" },
@@ -107,20 +108,26 @@ export default function Home() {
           <span className="text-gray-100 text-[10px] md:text-sm  font-red_hot_display font-light text-center">
             Invite friends using refferal code for bonus points!
           </span>
-          <div className=" bg-primary py-2 md:py-3 px-6 rounded-full flex items-center gap-2 md:gap-3 text-xs">
+          <div className=" bg-primary py-2 md:py-3 px-6 rounded-full flex items-center gap-2 md:gap-3 text-xs relative">
             <span>WALLET NAME</span>
-            <button
-              onClick={() => navigator.clipboard.writeText("WALLET NAME")}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 text-white"
-                fill="currentColor"
-                viewBox="0 0 448 512"
+            <Tippy trigger="click" content="Copied">
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText("WALLET NAME");
+                }}
+                type="button"
+                data-trigger="mouseenter"
               >
-                <path d="M320 448v40c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V120c0-13.3 10.7-24 24-24h72v296c0 30.9 25.1 56 56 56h168zm0-344V0H152c-13.3 0-24 10.7-24 24v368c0 13.3 10.7 24 24 24h272c13.3 0 24-10.7 24-24V128H344c-13.2 0-24-10.8-24-24zm121-31L375 7A24 24 0 0 0 358.1 0H352v96h96v-6.1a24 24 0 0 0 -7-17z" />
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path d="M320 448v40c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V120c0-13.3 10.7-24 24-24h72v296c0 30.9 25.1 56 56 56h168zm0-344V0H152c-13.3 0-24 10.7-24 24v368c0 13.3 10.7 24 24 24h272c13.3 0 24-10.7 24-24V128H344c-13.2 0-24-10.8-24-24zm121-31L375 7A24 24 0 0 0 358.1 0H352v96h96v-6.1a24 24 0 0 0 -7-17z" />
+                </svg>
+              </button>
+            </Tippy>
           </div>
         </div>
         <div className="px-2 w-full">
