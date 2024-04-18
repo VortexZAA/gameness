@@ -17,7 +17,8 @@ export default function Home() {
             src="/logo.png"
             alt="Logo"
             className="h-3.5 w-fit"
-            width={200}
+            quality={100}
+            width={500}
             height={200}
           />
           <div className="flex gap-2 items-center font-red_hot_display font-medium text-[10px] sm:text-xs md:text-sm lg:text-base">
@@ -69,7 +70,7 @@ export default function Home() {
             className="h-32 w-fit lg:h-full"
             quality={100}
             width={500}
-            height={200}
+            height={500}
           />
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 w-full">
