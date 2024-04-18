@@ -35,13 +35,13 @@ export default function Home() {
           </div>
         </header>
         <Image
-            src="/head-bg.png"
-            alt="Hero"
-            className=" w-1/2 xl:w-1/3 h-fit absolute right-0 top-[8vh] xl:top-[5vh] -z-10"
-            quality={100}
-            width={500}
-            height={500}
-          />
+          src="/head-bg.png"
+          alt="Hero"
+          className=" w-1/2 xl:w-1/3 h-fit absolute right-0 top-[8vh] xl:top-[5vh] -z-10"
+          quality={100}
+          width={500}
+          height={500}
+        />
         <div className="flex gap-3 justify-between items-center w-full  xl:h-[40vh] px-3">
           <div className=" pt-3 w-1/2 md:w-2/3 ">
             <h1 className="leading-7">GAMENESS AIRDROP</h1>
@@ -72,7 +72,6 @@ export default function Home() {
               </defs>
             </svg>
           </div>
-          
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 w-full px-3">
           {[
@@ -167,10 +166,10 @@ export default function Home() {
           alt="Hero"
           className="h-fit w-full"
         />
-        <div className="flex flex-col gap-4 w-full items-center px-3">
+        <div className="flex flex-col gap-4 w-full items-center ">
           <h1 className="leading-7">MISSION BOARD</h1>
           <HR />
-          <div className="grid gap-3 w-full pt-2 overflow-y-auto h-[70vh]">
+          <div className="grid gap-3 w-full pt-2 overflow-y-auto h-[70vh] px-3">
             {[
               {
                 id: 1,
@@ -231,21 +230,26 @@ export default function Home() {
                 title: "LOREM IPSUM",
                 description: "XXXXXXXX",
                 value: 500,
-              }
+              },
             ].map((item) => (
               <div
                 key={item.id}
                 className="flex justify-center  shadow shadow-white/10 gap-2 w-full items-center bg-gradient-to-r from-primary from-10% via-[#2F3136] via-30% rounded-lg px-6 py-2 "
               >
-                <div className="flex flex-col gap-0.5 w-full">
+                <div className="flex flex-col gap-0.5 w-1/2  ">
                   <h5 className=" text-xs">{item.title}</h5>
-                  <p className="text-gray-400 text-[10px] md:text-sm font-extralight">
+                  <span className="text-gray-400 text-[10px] md:text-sm font-extralight">
                     {item.description}
-                  </p>
+                  </span>
                 </div>
-                <button className="bg-white/5 rounded-full text-xs py-2 px-6">
-                  START
-                </button>
+                <div className="flex gap-3 md:gap-6 items-center">
+                  <span className="text-gray-400 text-[10px] shrink-0 md:text-sm font-extralight">
+                    +{item.value} GMNS
+                  </span>
+                  <button className="bg-white/5 rounded-full text-xs py-2 px-6">
+                    START
+                  </button>
+                </div>
               </div>
             ))}
           </div>
