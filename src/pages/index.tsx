@@ -43,7 +43,7 @@ export default function Home() {
             height={500}
           />
         <div className="flex gap-3 justify-between items-center w-full  xl:h-[40vh] px-3">
-          <div className=" pt-3 w-1/2 ">
+          <div className=" pt-3 w-1/2 md:w-2/3 ">
             <h1 className="leading-7">GAMENESS AIRDROP</h1>
             <h2 className="leading-7">+400 GMNS POINTS</h2>
             <svg
