@@ -122,7 +122,7 @@ export default function Home() {
                 REFERRAL MULTIPLIER
               </span>
 
-              <div className="bg-primary flex w-full justify-end h-3"></div>
+              <div className="bg-gradient-to-l from-primary from-30% via-red-800 via-100% flex w-full justify-end h-3"></div>
             </div>
           </div>
           <Image
