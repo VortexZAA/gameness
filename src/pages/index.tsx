@@ -67,8 +67,9 @@ export default function Home() {
             src="/hero.png"
             alt="Hero"
             className="h-32 w-fit lg:h-full"
-            width={150}
-            height={150}
+            quality={100}
+            width={500}
+            height={200}
           />
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 w-full">
