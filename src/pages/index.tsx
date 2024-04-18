@@ -11,7 +11,7 @@ const menu = [
 export default function Home() {
   return (
     <>
-      <main className="w-full h-full flex justify-start items-center flex-col min-h-screen max-w-[100vw] overflow-x-hidden text-white  md:gap-40 gap-6 p-3 pb-10 relative">
+      <main className="w-full h-full flex justify-start items-center flex-col min-h-screen max-w-[100vw] overflow-x-hidden text-white   gap-6 xl:gap-10 p-3 pb-10 relative">
         <header className=" h-8 flex justify-between items-center w-full">
           <Image
             src="/logo.png"
@@ -66,12 +66,12 @@ export default function Home() {
           <Image
             src="/hero.png"
             alt="Hero"
-            className="h-32 w-fit"
+            className="h-32 w-fit lg:h-full"
             width={150}
             height={150}
           />
         </div>
-        <div className="grid grid-cols-2 gap-3 w-full">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 w-full">
           {[
             {
               title: "MISSIONS  COMPLETED",
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="flex gap-2 items-center w-full text-xs py-3 pr-10 relative">
+        <div className="flex gap-2 items-center w-full text-[10px] sm:text-xs py-3 pr-10 relative">
           <div className=" flex flex-col justify-between h-full items-center absolute left-1/4">
             <span className="text-gray-100 w-20 font-red_hot_display font-light text-center">
               LOREM IPSUM{" "}
@@ -129,7 +129,7 @@ export default function Home() {
               LOREM IPSUM{" "}
             </span>
           </div>
-          <span className="text-gray-100 w-14 font-red_hot_display font-light text-center">
+          <span className="text-gray-100 w-12 font-red_hot_display font-light text-center">
             LOREM IPSUM{" "}
           </span>
 
@@ -163,11 +163,11 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item.id}
-                className="flex justify-center  shadow shadow-white/10 gap-2 w-full items-center bg-gradient-to-r from-primary from-10% via-[#2F3136] via-30% rounded-lg px-6 py-1 "
+                className="flex justify-center  shadow shadow-white/10 gap-2 w-full items-center bg-gradient-to-r from-primary from-10% via-[#2F3136] via-30% rounded-lg px-6 py-2 "
               >
-                <div className="flex flex-col gap-0 w-full">
-                  <h5 className="leading-7 text-xs">{item.title}</h5>
-                  <p className="text-gray-100 text-[10px] font-light">
+                <div className="flex flex-col gap-0.5 w-full">
+                  <h5 className=" text-xs">{item.title}</h5>
+                  <p className="text-gray-400 text-[10px] font-extralight">
                     {item.description}
                   </p>
                 </div>
@@ -184,8 +184,9 @@ export default function Home() {
           src="/footer.png"
           alt="Logo"
           className="h-fit w-full"
-          width={200}
-          height={200}
+          quality={100}
+          width={1000}
+          height={500}
         />
       </footer>
     </>
@@ -194,7 +195,7 @@ export default function Home() {
 
 const HR = () => (
   <svg
-    className="w-full h-fit"
+    className="w-full h-fit lg:w-2/3"
     viewBox="0 0 1273 6"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
