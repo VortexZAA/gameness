@@ -18,14 +18,7 @@ export default function Home() {
           width={500}
           height={500}
         />
-        <Image
-          src="/ust.png"
-          alt="Hero"
-          className=" w-1/3 xl:w-1/4 h-fit absolute left-0 top-0 -z-10"
-          quality={100}
-          width={500}
-          height={500}
-        />
+        
         <div className=" gap-6 xl:gap-10 flex flex-col  w-full  h-full container py-3 pb-10">
           <Header />
 
