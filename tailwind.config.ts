@@ -15,6 +15,7 @@ const config: Config = {
           200: "#888883",
         },
         dark: "#292A2E",
+        textGray: "#DCDCDC",
       },
       backgroundImage: {},
       fontFamily: {
