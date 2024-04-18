@@ -14,7 +14,7 @@ const menu = [
 export default function Home() {
   return (
     <>
-      <main className="w-full h-full flex justify-start items-center flex-col min-h-screen max-w-[100vw] overflow-x-hidden text-white   gap-6 xl:gap-10 py-3 pb-10 relative">
+      <main className="w-full h-full flex justify-start items-center flex-col min-h-screen max-w-[100vw] overflow-x-hidden text-white   gap-6 xl:gap-10  relative">
         <Image
           src="/head-bg.png"
           alt="Hero"
@@ -90,36 +90,36 @@ export default function Home() {
             </div>
           </div>
           <div className="px-2 w-full">
-            <div className="flex gap-2 items-center w-full text-[10px] md:text-sm sm:text-xs py-3 pr-10 md:pr-12 relative">
+            <div className="flex gap-2 items-center w-full text-[9px] md:text-sm sm:text-xs py-3 pr-11 md:pr-14 relative">
               <div className=" flex flex-col justify-between h-full items-center absolute left-1/4">
-                <span className="text-gray-100 w-20 md:w-24 font-red_hot_display font-light text-center">
-                  LOREM IPSUM{" "}
+                <span className="text-gray-100 w-24 md:w-28 font-red_hot_display font-light text-center">
+                  1.25X MULTIPLIER
                 </span>
                 <div className="bg-white flex w-3 justify-start h-3"></div>
-                <span className="text-gray-100 w-20 md:w-24 font-red_hot_display font-light text-center">
-                  LOREM IPSUM{" "}
+                <span className="text-gray-100 w-24 md:w-28 font-red_hot_display font-light text-center">
+                  10 REFERRALS
                 </span>
               </div>
               <div className=" flex flex-col justify-between h-full items-center absolute left-1/2">
-                <span className="text-gray-100 w-20 md:w-24 font-red_hot_display font-light text-center">
-                  LOREM IPSUM{" "}
+                <span className="text-gray-100 w-24 md:w-28 font-red_hot_display font-light text-center">
+                  1.5X MULTIPLIER
                 </span>
                 <div className="bg-white flex w-3 justify-start h-3"></div>
-                <span className="text-gray-100 w-20 md:w-24 font-red_hot_display font-light text-center">
-                  LOREM IPSUM{" "}
+                <span className="text-gray-100 w-24 md:w-28 font-red_hot_display font-light text-center">
+                  25 REFERRALS
                 </span>
               </div>
               <div className=" flex flex-col justify-between h-full items-center absolute right-0">
-                <span className="text-gray-100 w-20 md:w-24 font-red_hot_display font-light text-center">
-                  LOREM IPSUM{" "}
+                <span className="text-gray-100 w-24 md:w-28 font-red_hot_display font-light text-center">
+                  2X MULTIPLIER
                 </span>
                 <div className="bg-white flex w-3 justify-start h-3"></div>
-                <span className="text-gray-100 w-20 md:w-24 font-red_hot_display font-light text-center">
-                  LOREM IPSUM{" "}
+                <span className="text-gray-100 w-24 md:w-28 font-red_hot_display font-light text-center">
+                  50 REFERRALS
                 </span>
               </div>
-              <span className="text-gray-100 w-12 font-red_hot_display font-light text-center">
-                LOREM IPSUM{" "}
+              <span className="text-gray-100 w-20 font-red_hot_display font-light text-center">
+                REFERRAL MULTIPLIER
               </span>
 
               <div className="bg-primary flex w-full justify-end h-3"></div>
@@ -132,10 +132,10 @@ export default function Home() {
             alt="Hero"
             className="h-fit w-full"
           />
-          <div className="flex flex-col gap-4 w-full items-center ">
-            <h1 className="leading-7">MISSION BOARD</h1>
+          <div className="flex flex-col gap-2 w-full items-center ">
+            <h1 className="leading-7 mb-2 xl:mb-6">MISSION BOARD</h1>
             <HR />
-            <div className="grid gap-3 w-full pt-2 overflow-y-auto h-[70vh] px-3 py-2">
+            <div className="grid gap-3 w-full py-2 md:py-4 overflow-y-auto h-[70vh] px-3 ">
               {[
                 {
                   id: 1,
