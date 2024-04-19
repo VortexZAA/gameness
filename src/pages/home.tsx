@@ -29,7 +29,7 @@ export default function Home() {
         />
         <div className=" gap-6 xl:gap-10 flex flex-col  w-full  h-full container py-3 pb-10">
           <Header />
-          <div className="flex gap-3 justify-between items-center w-full  xl:h-[40vh] px-3">
+          <div className="flex gap-3 justify-between items-end w-full  xl:h-[40vh] px-3">
             <div className=" pt-3 w-1/2 md:w-2/3 ">
               <h1 className="leading-7">GAMENESS</h1>
               <h1 className="leading-7">AIRDROP</h1>

@@ -24,7 +24,7 @@ export default function Home() {
 
           <div className="flex gap-3 justify-between items-center w-full md:pt-40 xl:h-[50vh] max-h-[450px] px-3">
             <div className=" pt-3 w-2/3  ">
-              <p className="text-textGray text-xs md:text-sm font-light font-red_hot_display pb-3 md:pb-6">
+              <p className="text-textGray text-xs md:text-sm font-light font-red_hot_display pb-3 md:pb-6 2xl:pb-8">
                 YOU'VE EARNED GMNS POINTS JUST BY BEING HERE!
               </p>
               <h1 className="leading-7">CONGRATULATIONS</h1>
