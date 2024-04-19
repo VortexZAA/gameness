@@ -27,7 +27,7 @@ export default function Home() {
           width={500}
           height={500}
         />
-        <div className=" gap-6 xl:gap-10 flex flex-col  w-full  h-full container py-3 pb-10">
+        <div className=" gap-6 xl:gap-10 flex flex-col  w-full  h-full container py-3 pb-10 2xl:px-12">
           <Header />
           <div className="flex gap-3 justify-between items-end w-full  xl:h-[40vh] px-3">
             <div className=" pt-3 w-1/2 md:w-2/3 ">

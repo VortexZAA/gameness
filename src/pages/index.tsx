@@ -9,7 +9,7 @@ import { HRust } from "@/components/icons";
 export default function Home() {
   return (
     <>
-      <main className="w-full h-full flex justify-start items-center flex-col min-h-screen max-w-[100vw] overflow-x-hidden text-white     relative">
+      <main className="w-full h-full flex justify-start items-center flex-col min-h-screen max-w-[100vw] overflow-x-hidden text-white relative">
         <Image
           src="/main-bg.png"
           alt="Hero"
@@ -19,10 +19,10 @@ export default function Home() {
           height={500}
         />
 
-        <div className=" gap-6 xl:gap-10 flex flex-col  w-full  h-full container py-3 pb-10">
+        <div className=" gap-6 xl:gap-10 flex flex-col  w-full  h-full container py-3 pb-10 2xl:px-12">
           <Header />
 
-          <div className="flex gap-3 justify-between items-center w-full md:pt-40 xl:h-[50vh] max-h-[450px] px-3">
+          <div className="flex gap-3 justify-between items-center w-full md:pt-40 xl:h-[50vh] max-h-[450px] px-3 ">
             <div className=" pt-3 w-1/2  ">
               <p className="text-textGray text-xs md:text-sm font-light font-red_hot_display pb-4 md:pb-6 2xl:pb-8">
                 GET REWARDED WITH GMNS POINTS
