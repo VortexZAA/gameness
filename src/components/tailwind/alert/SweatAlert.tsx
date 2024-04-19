@@ -75,7 +75,7 @@ export const ToastSuccess = ({ tHashLink }: { tHashLink?: string }) =>
   });
 
 export const Toast = Swal.mixin({
-  toast: true,
+  toast: true, 
   position: "bottom-end",
   customClass: {
     container: "items-center !w-full md:!w-1/3 ",
