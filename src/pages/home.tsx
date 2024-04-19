@@ -5,6 +5,8 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import Header from "@/components/header";
 import { HR, HRust } from "@/components/icons";
+import { useState } from "react";
+import Modal from "@/components/tailwind/Modal";
 const menu = [
   { name: "Home", link: "/", target: "_self" },
   { name: "Twitter", link: "#", target: "_blank" },
@@ -12,6 +14,8 @@ const menu = [
   { name: "FAQ", link: "#", target: "_blank" },
 ];
 export default function Home() {
+  const [modal, setModal] = useState(false);
+  const [selected, setSelected] = useState<any>(null);
   return (
     <>
       <main className="w-full h-full flex justify-start items-center flex-col min-h-screen max-w-[100vw] overflow-x-hidden text-white   gap-6 xl:gap-10  relative">
@@ -136,68 +140,7 @@ export default function Home() {
             <h1 className="leading-7 mb-2 xl:mb-6">MISSION BOARD</h1>
             <HR />
             <div className="grid gap-3 w-full py-2 md:py-4 overflow-y-auto h-[70vh] px-3 ">
-              {[
-                {
-                  id: 1,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-                {
-                  id: 2,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-                {
-                  id: 3,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-                {
-                  id: 4,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-                {
-                  id: 5,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-                {
-                  id: 6,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-                {
-                  id: 7,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-                {
-                  id: 8,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-                {
-                  id: 9,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-                {
-                  id: 10,
-                  title: "LOREM IPSUM",
-                  description: "XXXXXXXX",
-                  value: 500,
-                },
-              ].map((item) => (
+              {dataList.map((item) => (
                 <div
                   key={item.id}
                   className="flex justify-between  shadow shadow-white/10 gap-2 w-full items-center bg-gradient-to-r from-primary from-10% via-[#2F3136] via-30% rounded-lg px-3 md:px-6 py-2 "
@@ -212,7 +155,13 @@ export default function Home() {
                     <span className="text-gray-400 text-[10px] shrink-0 md:text-sm font-extralight">
                       +{item.value} GMNS
                     </span>
-                    <button className="bg-white/5 rounded-full text-xs py-2 px-6">
+                    <button
+                      onClick={() => {
+                        setSelected(item);
+                        setModal(true);
+                      }}
+                      className="bg-white/5 rounded-full text-xs py-2 px-6"
+                    >
                       START
                     </button>
                   </div>
@@ -221,7 +170,163 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Modal modal={modal} setModal={setModal} title="">
+          <div className=" max-w-[80vw] w-[600px] flex flex-col gap-6 text-xs md:text-sm 2xl:text-base font-red_hot_display relative">
+            {selected && (
+              <>
+                <div className="flex flex-col gap-1">
+                  <h2 className="mb-0"> {selected?.modalTitle} </h2>
+                  <HRust />
+                  <span className="text-white/60">
+                    {" "}
+                    {selected?.modalLabel}{" "}
+                  </span>
+                  <p> {selected?.modalDesc} </p>
+                </div>
+                <div className="w-full">
+                  <Image
+                    src={selected.modalImg}
+                    width={600}
+                    height={100}
+                    className="w-full h-fit"
+                    alt=""
+                  />
+                </div>
+                <Link
+                  href={selected.modalLink}
+                  className="bg-primary text-center text-white rounded-full py-2 md:py-3 w-full font-bold"
+                  /* onClick={() => setModal(false)} */
+                >
+                  <span>FOLLOW</span>
+                </Link>
+              </>
+            )}
+          </div>
+        </Modal>
       </main>
     </>
   );
 }
+
+const dataList = [
+  {
+    id: 1,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+  {
+    id: 2,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+  {
+    id: 3,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+  {
+    id: 4,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+  {
+    id: 5,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+  {
+    id: 6,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+  {
+    id: 7,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+  {
+    id: 8,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+  {
+    id: 9,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+  {
+    id: 10,
+    title: "LOREM IPSUM",
+    description: "XXXXXXXX",
+    value: 500,
+    modalTitle: "GMNS UNIQUE MISSION",
+    modalLabel: "FOLLOW GAMENESS ON X",
+    modalDesc:
+      "Stay up-to-date with the latest adventures and updates by following Gameness on our social platforms.",
+    modalImg: "/twitter-bg.png",
+    modalLink: "#",
+  },
+];

@@ -11,14 +11,14 @@ export default function Home() {
     <>
       <main className="w-full h-full flex justify-start items-center flex-col min-h-screen max-w-[100vw] overflow-x-hidden text-white     relative">
         <Image
-          src="/head-bg.png"
+          src="/main-bg.png"
           alt="Hero"
-          className=" w-1/2 xl:w-1/3 h-fit absolute right-0 top-[8vh] xl:top-[5vh] -z-10"
+          className=" w-2/3 xl:w-1/2 h-fit absolute right-0 top-[8vh] xl:top-[5vh] -z-10"
           quality={100}
           width={500}
           height={500}
         />
-        
+
         <div className=" gap-6 xl:gap-10 flex flex-col  w-full  h-full container py-3 pb-10">
           <Header />
 
@@ -29,7 +29,6 @@ export default function Home() {
               </p>
               <h1 className="leading-7">GAMENESS</h1>
               <h1 className="leading-7">AIRDROP</h1>
-              <h2 className="leading-7">+400 GMNS POINTS</h2>
               <HRust />
               <p className="text-textGray text-xs md:text-sm font-light font-red_hot_display pt-3">
                 Complete Missions <br />
@@ -52,21 +51,10 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="w-1/2 flex md:justify-center   md:items-end h-full  md:pt-40 ">
-              <Image
-                src="/hero.png"
-                alt="Hero"
-                className="w-1/3 xl:w-1/4 h-fit"
-                quality={100}
-                width={500}
-                height={500}
-              />
-            </div>
+            <div className="w-1/2 flex md:justify-center   md:items-end h-full  md:pt-40 "></div>
           </div>
         </div>
       </main>
     </>
   );
 }
-
-
