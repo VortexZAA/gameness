@@ -15,9 +15,9 @@ export const HR = () => (
           y2="3"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4D4E51" stop-opacity="0" />
-          <stop offset="0.5" stop-color="#979797" />
-          <stop offset="1" stop-color="#4D4E51" stop-opacity="0" />
+          <stop stopColor="#4D4E51" stopOpacity="0" />
+          <stop offset="0.5" stopColor="#979797" />
+          <stop offset="1" stopColor="#4D4E51" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
@@ -40,8 +40,8 @@ export const HR = () => (
           y2="3"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.5" stop-color="#979797" />
-          <stop offset="1" stop-color="#4D4E51" stop-opacity="0" />
+          <stop offset="0.5" stopColor="#979797" />
+          <stop offset="1" stopColor="#4D4E51" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
