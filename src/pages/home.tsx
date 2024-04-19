@@ -136,8 +136,8 @@ export default function Home() {
             alt="Hero"
             className="h-fit w-full"
           />
-          <div className="flex flex-col gap-2 w-full items-center ">
-            <h1 className="leading-7 mb-2 xl:mb-6">MISSION BOARD</h1>
+          <div className="flex flex-col gap-2 w-full items-center pt-4 md:pt-10 ">
+            <h1 className="leading-7 mb-2 xl:mb-6 2xl:mb-8">MISSION BOARD</h1>
             <HR />
             <div className="grid gap-3 w-full py-2 md:py-4 overflow-y-auto h-[70vh] px-3 ">
               {dataList.map((item) => (

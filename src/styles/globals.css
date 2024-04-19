@@ -30,10 +30,10 @@
     @apply sm:bg-[#ecf1f6];
   }
   h1 {
-    @apply text-3xl  xl:text-6xl xl:mb-8 2xl:text-8xl 2xl:mb-12  xl:leading-relaxed font-bold;
+    @apply text-3xl  xl:text-6xl xl:mb-8 2xl:text-8xl 2xl:mb-14  xl:leading-relaxed font-bold;
   }
   h2 {
-    @apply text-xl  xl:text-4xl xl:mb-4  2xl:text-5xl 2xl:mb-4 xl:leading-relaxed font-bold;
+    @apply text-xl  xl:text-4xl xl:mb-4  2xl:text-5xl 2xl:mb-4 2xl:-mt-2 xl:leading-relaxed font-bold;
   }
   h3 {
     @apply text-base font-semibold;
