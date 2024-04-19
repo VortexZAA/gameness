@@ -37,7 +37,7 @@ export default function Home() {
                 <input
                   type="text"
                   placeholder="Referral Code"
-                  className="bg-white/80 rounded-full shadow-lg outline-primary shadow-primary/60 placeholder:text-primary text-black text-center  w-full px-3 py-2 "
+                  className="bg-white/80 rounded-full shadow-lg font-bold outline-primary shadow-primary/60 placeholder:text-primary text-black text-center  w-full px-3 py-2 "
                 />
                 <button className=" flex gap-2 shrink-0 shadow-lg shadow-primary/60 bg-primary items-center font-red_hot_display text-white font-bold py-2 px-3 md:px-5 rounded-full h-8 md:h-10 text-xs md:text-sm hover:bg-black hover:text-white  ">
                   ENTER
