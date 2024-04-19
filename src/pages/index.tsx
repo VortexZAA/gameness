@@ -38,7 +38,7 @@ export default function Home() {
               <div className="flex gap-3 pt-3">
                 <Link
                   href={"/home"}
-                  className=" flex gap-2 bg-primary items-center font-red_hot_display text-white font-bold py-2 px-3 md:px-5 rounded-full h-8 md:h-10 text-xs md:text-sm "
+                  className=" flex gap-2 bg-primary hover:bg-black transition-colors items-center font-red_hot_display text-white font-bold py-2 px-3 md:px-5 rounded-full h-8 md:h-10 text-xs md:text-sm "
                 >
                   <Image
                     src="/x.png"
