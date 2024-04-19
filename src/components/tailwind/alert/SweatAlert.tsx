@@ -1,5 +1,4 @@
 import Swal from "sweetalert2";
-import Chains from "@/data/chain.json"
 export const ToastError = Swal.mixin({
   toast: true,
   position: "top-end",
